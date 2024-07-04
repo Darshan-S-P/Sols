@@ -50,4 +50,69 @@ const NotificationList = () => {
   );
 };
 
+const Notification =  ({type, message, description, txid,onHide})=>{
+  const {useConnection} = useConnection;
+  const {networkConfiguration} = useNetworkConfiguration;
+
+  useEffect(()=>{
+    const id = setTimeout(()=>{
+      onHide();
+    },8000);
+  return ()=>{
+    clearInterval(id);
+  };
+  
+  },[onHide]);
+
+  return(
+
+    <div className="bg-bkg-1 pointer-events-auto z-50 mx-4 mt-2 mb-12 w-full max-w-sm
+    overflow-hidden rounded-md bg-[#0a1023] p-2 shadow-lg right-1">
+      <div className="p-4">
+
+        <div className="flex items-center"> 
+          <div className="flex-shrink-0"> 
+         
+              {type === "success" ?(
+                <CheckCircleIcon className="text-success mr-1 h-8 w-8"/>
+                ):null}
+              {type === "info"?   (
+                <InformationCircleIcon className="text-info mr-1 h-8 w-8"/>
+
+              ):null}
+
+              <div className="ml-2 w-0 flex-1">
+                <div className="text-fgd-1 font-bold">{message}</div>
+                {
+                  description ?(
+
+                    <p className="text-fgd-2 mt-0.5 text-sm">{description}</p>
+                  ):null}
+                {
+
+                  txid ?(
+                  <div className="flex flex-row">
+                    <a href={`https://explorer.solana.com/tx/` +txid + `?cluster=$
+                    {networkConfiguration}`}
+                    target="_blank" rel="noreferrer" className="link-accent link flex
+                    flex-row">
+                      <NotificationSVG/>
+                      <div className="mx-4"></div>
+                      {txid.slice(0,8)}....
+                      {txid.slice( txid.length -8)}
+                      </div>
+                      </a>
+                    </div>
+                  )  :null}
+
+              
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  );
+};
 export default NotificationList;
