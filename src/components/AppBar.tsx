@@ -48,7 +48,7 @@ export const AppBar: FC =(props) => {
               </div>
               <div className="hs-collapse mx-auto
               mt-2 hidden grow basis-full
-              items-center justify-center transistion-all duration-300 lg:mt-0 lg:flex lg:basis-auto" id="mobileMenu"> 
+              items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto" id="mobileMenu"> 
 
                 <ul id="navbar-navlists"
                 className="navbar-nav">
