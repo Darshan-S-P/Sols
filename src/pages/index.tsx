@@ -35,7 +35,7 @@ const Home: NextPage = (props) => {
       />
     </Head>
       <HomeView setOpenCreateModal= {setOpenCreateModal}/>
-      {/* <ToolView 
+       <ToolView 
       setOpenAirdrop={setOpenAirdrop}
       setOpenContact={setOpenContact}
       setOpenCreateModal={setOpenCreateModal}
@@ -44,7 +44,7 @@ const Home: NextPage = (props) => {
       setOpenTokenMetaData=
       {setOpenTokenMetaData}
       />
-
+ 
       <FeatureView
       setOpenAirdrop={setOpenAirdrop}
       setOpenContact={setOpenContact}
@@ -66,7 +66,7 @@ const Home: NextPage = (props) => {
            </div>
 
       )}
-        {openTokenMetaData && (
+        {/* {openTokenMetaData && (
         <div className="new_loader relative
         h-full bg-slate-900">
           <TokenMetadata setOpenTokenMetaData=
@@ -98,7 +98,7 @@ const Home: NextPage = (props) => {
           {setOpenSendTransaction}/>
            </div>
 
-      )} */}
+      )}  */}
 
 
  
