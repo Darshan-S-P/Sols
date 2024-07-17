@@ -2,10 +2,13 @@ import React, { FC, useCallback, useState } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { Keypair, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
 import { MINT_SIZE, TOKEN_PROGRAM_ID, createInitializeMintInstruction, getMinimumBalanceForRentExemptMint, getAssociatedTokenAddress, createMintToInstruction, createAssociatedTokenAccountInstruction } from '@solana/spl-token';
-import { PROGRAM_ID, createCreateMetadataAccountV3Instruction } from '@metaplex-foundation/mpl-token-metadata';
+import { PROGRAM_ID, createCreateMetadataAccountV3Instruction,createCreateMetadataAccountInstruction } from '@metaplex-foundation/mpl-token-metadata';
 import { notify } from '../../utils/notifications';
 import { ClipLoader } from 'react-spinners';
+// import Branding from 'components/Branding';
+//import { InputView } from "../index";
 import { useNetworkConfiguration } from 'contexts/NetworkConfigurationProvider';
+//UI part import
 import { AiOutlineClose } from 'react-icons/ai';
 import CreateSVG from '../../components/SVG/CreateSVG';
 import { Upload } from 'lucide';
@@ -23,7 +26,7 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
     const [token, setToken] = useState({
         name: "",
         symbol: "",
-        decimal: "",
+        decimals: "",
         amount: "",
         image: "",
         description: ""
@@ -72,7 +75,7 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
                       uses: null,
                       collection: null,
                     },
-                    isMutable: flase,
+                    isMutable: false,
                     collectionDetails: null,
 
                   
@@ -160,8 +163,8 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
                     url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
                     data: formData,
                     headers: {
-                        pinata_api_key: "",
-                        pinata_secret_api_key: "",
+                        pinata_api_key: "0281214db5108a6f5901",
+                        pinata_secret_api_key: "d427682fe9525e6fc5fb2114fa587ae12bff36f50ead3bad1379dcc0fcb253fb",
                         "Content-Type": "multipart/form-data",
                     },
                 });
@@ -196,8 +199,8 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
                 url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
                 data: data,
                 headers: {
-                    pinata_api_key: "",
-                    pinata_secret_api_key: "",
+                    pinata_api_key: "0281214db5108a6f5901",
+                    pinata_secret_api_key: "d427682fe9525e6fc5fb2114fa587ae12bff36f50ead3bad1379dcc0fcb253fb",
                     "Content-Type": "application/json",
                 },
             });
@@ -210,7 +213,52 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
         setIsLoading(false);
     };
 
-    return (
-        <div>index</div>
+    return( <>
+    {isLoading &&(
+          <div className="absolute top-0 left-0 z-50
+          flex h-screen w-full items-center
+          justify-center bg-black/[.3] backdrop-blur-
+          [10px]"> 
+            <ClipLoader />
+          </div>
+        )}
+        {!tokenMintAddress ? (
+          <section className="flex w-full
+          items-center py-6 px-0 lg:h-screen lg:p-10">
+            <div className="container">
+              <div className="bg-default-950/40
+              mx-auto max-w--5xl overflow-hidden rounded-2xl backdrop-blur-2xl">
+                <div className="grid gap-10 lg:grid-cols02">
+                  <div className="ps-4 hidden py-4 pt-10 lg:block">
+                    <div className="upload relative w-full overflow-hidden rounded-xl">
+                      {token.image ?(
+                          <img src={token.image} alt="token" className="w-2/5" />
+                        ):(
+                          <label htmlFor="file" className="custum-file-upload">
+                            <div className="icon">
+                              <CreateSVG/>
+                            </div>
+                            <div className="text">
+                              <span>Click To Upload Image</span>
+                            </div>
+                            <input type="file" id="file" onChange={handleImageChange}/>
+                          </label>
+                        )}
+                    </div>
+                    <textarea rows="6" onChange={(e)=>handleImageChange("description",e)} className="border-default-200 relative mt-48 block w-full rounded border-white/10 bg-transparent py-1.5 px-3 text-white/80 focus:border-white/25 focus:ring-transparent"
+                      placeholder="Description of your token ">
+
+                    </textarea>
+                    <div className=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        ):(
+         "" 
+        )}
+    </>
     );
 };
