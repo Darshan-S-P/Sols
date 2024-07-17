@@ -6,13 +6,14 @@ import { PROGRAM_ID, createCreateMetadataAccountV3Instruction,createCreateMetada
 import { notify } from '../../utils/notifications';
 import { ClipLoader } from 'react-spinners';
 // import Branding from 'components/Branding';
-//import { InputView } from "../index";
+import { InputView } from "../index";
 import { useNetworkConfiguration } from 'contexts/NetworkConfigurationProvider';
 //UI part import
 import { AiOutlineClose } from 'react-icons/ai';
 import CreateSVG from '../../components/SVG/CreateSVG';
 import { Upload } from 'lucide';
 import axios from 'axios';
+import { create } from 'domain';
 
 export const CreateView: FC = ({ setOpenCreateModal }) => {
     const { connection } = useConnection();
@@ -228,7 +229,7 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
             <div className="container">
               <div className="bg-default-950/40
               mx-auto max-w--5xl overflow-hidden rounded-2xl backdrop-blur-2xl">
-                <div className="grid gap-10 lg:grid-cols02">
+                <div className="grid gap-10 lg:grid-cols-2">
                   <div className="ps-4 hidden py-4 pt-10 lg:block">
                     <div className="upload relative w-full overflow-hidden rounded-xl">
                       {token.image ?(
@@ -249,11 +250,64 @@ export const CreateView: FC = ({ setOpenCreateModal }) => {
                       placeholder="Description of your token ">
 
                     </textarea>
-                    <div className=""></div>
+                    </div>
+
+                    <div className="lg:ps-0 flex flex-col p-10">
+                      <div className="pb-6 my-auto">
+                        <h4 className="mb-4 text-2xl font-bold text-white">
+                          Solana Token Creator
+                        </h4>
+                        <p className="text-default-300 mb-8 max-w-sm">
+                          Kindly provide all the details about your token  
+                        </p>
+
+                        <div className="text-start">
+                          <InputView name="Name"
+                          placeholder="name"
+                          clickhandle={(e)=>
+                            handleImageChange
+                            ("name", e)}/>
+                            <InputView name="Symbol"
+                          placeholder="symbol"
+                          clickhandle={(e)=>
+                            handleImageChange
+                            ("symbol", e)}/>
+                            <InputView name="Decimals"
+                          placeholder="decimals"
+                          clickhandle={(e)=>
+                            handleImageChange
+                            ("decimals", e)}/>
+                            <InputView name="Amount"
+                          placeholder="amount"
+                          clickhandle={(e)=>
+                            handleImageChange
+                            ("amount", e)}/>
+                            <div className="mb-6 text-center"> 
+                            <button onClick={()=> createToken(token)} className="bg-primary-600/90 hover:bg-primary-600 group mt-5 inline-flex w-full items-center justify-center rounded-lg px-6 py-2 text-white backdrop-blur-2xl transition-all duration-500
+                            "type="submit">
+                              <span className="fw-bold">Create Token </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="text-center"> 
+                          <ul className="flex flex-wrap items-center justify-center gap-2">
+                            <li>
+                              <a onClick={()=>setOpenCreateModal(false)} className="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-blue-600/60">
+                                <i className="text-2xl text-white group-hover:text-white">
+                                  <AiOutlineClose/>
+                                </i>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>  
           </section>
 
         ):(
