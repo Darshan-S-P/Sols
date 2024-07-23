@@ -135,7 +135,7 @@ export const Footer: FC = () => {
           <p className="text-default-400 text-base font-medium">
             @SolanaAI -
             <a href="#">
-              Designed & Created <i data-lucide="heart" className="inline h-4 w-4 fill-red-500 text-red-500"></i> by @theblockchaincoders
+              Designed & Created <i data-lucide="heart" className="inline h-4 w-4 fill-red-500 text-red-500"></i> by @CryptoArtisans
             </a>
           </p>
           <p className="text-default-400 text-base font-medium">

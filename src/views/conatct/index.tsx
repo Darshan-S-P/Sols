@@ -29,6 +29,7 @@ export const ContactView: FC = ({ setOpenContact }) => {
               {/* First */}
               <Branding
                 image="auth-img"
+               
                 title="To Build your Solana Token Creator"
                 message="Try and create your first ever Solana project"
               />
