@@ -22,10 +22,6 @@ export const AppBar: FC =(props) => {
       link: "#price",
     },
     {
-      name: "Home",
-      link: "#home",
-    },
-    {
       name: "Faq",
       link: "#faq",
     },
