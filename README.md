@@ -1,6 +1,9 @@
 # Sols
 
 Sols is a web development project by Darshan-S-P, designed with a modern tech stack including Next.js, Tailwind CSS, and TypeScript. This repository contains all the necessary configurations and source files to get started and build upon the project.
+## Project Overview
+
+![alt text](https://www.daulathussain.com/wp-content/uploads/2024/01/Creat-Solana-Token-Creator-Dapp-Full-stack-solana-project.jpg)
 
 ## Features
 
