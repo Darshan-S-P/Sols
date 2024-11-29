@@ -6,7 +6,15 @@ import { MdGeneratingTokens, MdToken } from 'react-icons/md';
 
 
 
-export const FeatureView: FC = ({
+interface FeatureViewProps {
+  setOpenAirdrop: (value: boolean) => void;
+  setOpenContact: (value: boolean) => void;
+  setOpenCreateModal: (value: boolean) => void;
+  setOpenSendTransaction: (value: boolean) => void;
+  setOpenTokenMetaData: (value: boolean) => void;
+}
+
+export const FeatureView: FC<FeatureViewProps> = ({
   setOpenAirdrop,
   setOpenContact,
   setOpenCreateModal,

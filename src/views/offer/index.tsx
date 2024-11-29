@@ -9,9 +9,9 @@ export const OfferView: FC = () => {
             <h2 className='mb-4 text-3xl font-medium capitalize text-white'>
               Solana Token Popularity
             </h2>
-            <p className='text-default-200 text-sm font-medium'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus aspernatur alias provident pariatur sint ducimus laudantium, <br />
-              velit repellat esse.
+            <p className='text-default-100 text-xl font-medium'>
+              Here are some reviews written by some of our customers<br />
+             
             </p>
           </div>
         </div>
@@ -22,16 +22,14 @@ export const OfferView: FC = () => {
             <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
               <div className="p-10">
                 <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
+                John D
                 </h3>
 
                 <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
+                "The Solana Token Builder exceeded my expectations! It made creating and managing tokens on the Solana blockchain seamless and incredibly fast. Highly recommend it to developers and creators!"
                 </p>
                 <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
+                  
                 </a>
               </div>
             </div>
@@ -42,16 +40,13 @@ export const OfferView: FC = () => {
             <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
               <div className="p-10">
                 <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
+                Sarah M.
                 </h3>
 
                 <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
-                </p>
+                "A fantastic tool for anyone looking to dive into token creation. The user interface is intuitive, and the platform provides all the features you need for token management."                </p>
                 <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
+                 
                 </a>
               </div>
             </div>
@@ -62,16 +57,15 @@ export const OfferView: FC = () => {
             <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
               <div className="p-10">
                 <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
+                Alex T.
                 </h3>
 
                 <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
+                "I was new to blockchain development, but this platform made it easy to mint and trade tokens without any hassle. Great job!"
+
                 </p>
                 <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
+                  
                 </a>
               </div>
             </div>
@@ -80,16 +74,28 @@ export const OfferView: FC = () => {
             <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
               <div className="p-10">
                 <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
+                Emma K.
                 </h3>
 
                 <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
+                "The responsiveness of the platform and the ease of use make it a standout in the crypto space. Love the design and the performance!"
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div className='space-y-6'>
+            <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
+              <div className="p-10">
+                <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
+                Michael R.
+                </h3>
+
+                <p className='text-default-100 mb-4 text-sm font-medium'>
+                "I've been using this for a while now, and I must say it's one of the best platforms for token building. The integration with wallets like Phantom is seamless, and transactions are super smooth."
                 </p>
                 <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
+                 
                 </a>
               </div>
             </div>
@@ -98,34 +104,14 @@ export const OfferView: FC = () => {
             <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
               <div className="p-10">
                 <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
+                Olivia H.
                 </h3>
 
                 <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
+                "The support team was quick to respond to my questions, and the platform is both powerful and user-friendly. Highly recommend it to anyone in the NFT and token space!"
                 </p>
                 <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='space-y-6'>
-            <div className="bg-default-950/40 hover:-translate-y-2 border-primary border-s-2 rounded-xl backdrop-blur-3xl transition-all duration-500">
-              <div className="p-10">
-                <h3 className='mb-4 mt-8 text-2xl font-medium text-white'>
-                  Best Token Builder
-                </h3>
-
-                <p className='text-default-100 mb-4 text-sm font-medium'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa earum corrupti molestias sit nisi eveniet possimus ipsa aspernatur unde eum distinctio reiciendis provident, quibusdam dolores ea pariatur ratione sed, numquam doloremque! Sapiente, tenetur modi!
-                </p>
-                <a href="" className='text-primary group relative inline-flex items-center gap-2'>
-                  <span className='bg-primary/80 absolute -bottom-0 h-px w-7/12 rounded transition-all duration-500 group-hover:w-full'>
-                    Read More <i className='h-4 w-4'></i>
-                  </span>
+                  
                 </a>
               </div>
             </div>
